@@ -14,15 +14,12 @@ export class WatchBoxComponent implements OnInit {
     milliseconds: 0,
   };
   intervalTimer;
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.intervalTimer = setInterval(() => {
       this.timer();
     }, 1);
-    setTimeout(() => {
-      clearInterval(this.intervalTimer);
-    }, 4000);
   }
 
   timer() {
