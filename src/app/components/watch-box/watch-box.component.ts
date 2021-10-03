@@ -20,6 +20,9 @@ export class WatchBoxComponent implements OnInit {
     this.intervalTimer = setInterval(() => {
       this.timer();
     }, 1);
+    setTimeout(() => {
+      clearInterval(this.intervalTimer);
+    }, 4000);
   }
 
   timer() {

@@ -38,6 +38,7 @@ export class WatchComponent implements OnInit {
     this.intervalTimer = setInterval(() => {
       this.animate();
     }, 30);
+    setTimeout(() => { clearInterval(this.intervalTimer) }, 4000)
   }
 
   calcSpeed() {
